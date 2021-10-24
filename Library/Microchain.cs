@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Text.Json;
 using System.Collections.Generic;
 namespace Microchain
@@ -8,6 +9,7 @@ namespace Microchain
 
         List<Block> Chain = new List<Block>();
 
+        private const String FirstHash = "TITFBOMBC";
         public Block[] GetBlocks()
         {
             return Chain.ToArray();
@@ -45,17 +47,27 @@ namespace Microchain
 
         public Block createBlock(Object content)
         {
-            int newId =  (Chain.Count >= 1?  Chain[Chain.Count - 1].id  : 0);
-            String passHash =  (Chain.Count >= 1? getHash(Chain[Chain.Count - 1]) : HashString("TITFBOMBC")); //This Is The Fitst Block Of My BlockChain
+            int newId =  (Chain.Count >= 1?  Chain[Chain.Count - 1].id + 1  : 0);
+            String passHash =  (Chain.Count >= 1? getHash(Chain[Chain.Count - 1]) : HashString(FirstHash)); //This Is The Fitst Block Of My BlockChain
             Block block = new Block(newId, passHash, content);
             Chain.Add(block);
             return block;
         }
 
+        public void LoadFromFile(String FileName){
+            if (!File.Exists(FileName)) throw new FileNotFoundException();
+            String data = File.ReadAllText(FileName);
+            Chain = JsonSerializer.Deserialize<List<Block>>(data);
+        }
+        public void SaveToFile(String FileName){
+            if (!check()) throw new Exception("Violation of integrity");
+            String serializedBlock = JsonSerializer.Serialize(Chain);
+            File.WriteAllText(FileName,serializedBlock);
+        }
         public Boolean check()
         {
             Boolean result = true;
-            String prevHash = String.Empty;
+            String prevHash = HashString(FirstHash);
             foreach (Block block in Chain)
             {
                 if (block.hash != prevHash)

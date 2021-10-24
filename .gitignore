@@ -452,3 +452,8 @@ $RECYCLE.BIN/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+*.dll
+*.dll
+Library/obj/Debug/net6.0/microchain.net.dll
+*.pdb
+*.dll
