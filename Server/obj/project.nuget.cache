@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "efvbM4mXkdKqFbI01WhZAWyUkZKcLARBa/zpRbAmtpzc/IiQpz2oeZ/NgcjnI/gdzHwqHNzRDs5mLRsZp3SsiA==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\alber\\Projects\\microchainServer\\microchainServer.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "No se puede resolver 'Swashbuckle.AspNetCore (>= 5.6.3)' para 'net6.0'.",
+      "libraryId": "Swashbuckle.AspNetCore",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}
