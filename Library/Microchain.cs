@@ -8,6 +8,7 @@ namespace Microchain
     {
 
         List<Block> Chain = new List<Block>();
+        private String fileName = null;
 
         private const String FirstHash = "TITFBOMBC";
         public Block[] GetBlocks()
@@ -58,8 +59,13 @@ namespace Microchain
             if (!File.Exists(FileName)) throw new FileNotFoundException();
             String data = File.ReadAllText(FileName);
             Chain = JsonSerializer.Deserialize<List<Block>>(data);
+            if (!check()) {
+                Chain = new List<Block>();
+                throw new Exception("Violation of integrity");
+            }
+            this.fileName = FileName;   
         }
-        public void SaveToFile(String FileName){
+        public void SaveToFile(String FileName = null){
             if (!check()) throw new Exception("Violation of integrity");
             String serializedBlock = JsonSerializer.Serialize(Chain);
             File.WriteAllText(FileName,serializedBlock);

@@ -96,8 +96,8 @@ namespace Client
             {
                 try{
                  result = program.Promp();
-                }catch(Exception){
-                    Console.WriteLine("💣ERROR");
+                }catch(Exception e){
+                    Console.WriteLine($"💣ERROR: {e.Message}");
                 }
             }while(result != -1);
 

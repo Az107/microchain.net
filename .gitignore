@@ -457,3 +457,6 @@ $RECYCLE.BIN/
 Library/obj/Debug/net6.0/microchain.net.dll
 *.pdb
 *.dll
+*.dll
+*.pdb
+*.cache

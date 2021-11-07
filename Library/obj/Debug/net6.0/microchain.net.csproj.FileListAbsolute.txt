@@ -10,15 +10,3 @@ C:\Users\alber\Projects\microchain.net\obj\Debug\net6.0\microchain.net.csproj.Co
 C:\Users\alber\Projects\microchain.net\obj\Debug\net6.0\microchain.net.dll
 C:\Users\alber\Projects\microchain.net\obj\Debug\net6.0\ref\microchain.net.dll
 C:\Users\alber\Projects\microchain.net\obj\Debug\net6.0\microchain.net.pdb
-C:\Users\alber\Projects\microchain.net\Library\bin\Debug\net6.0\microchain.net.deps.json
-C:\Users\alber\Projects\microchain.net\Library\bin\Debug\net6.0\microchain.net.dll
-C:\Users\alber\Projects\microchain.net\Library\bin\Debug\net6.0\ref\microchain.net.dll
-C:\Users\alber\Projects\microchain.net\Library\bin\Debug\net6.0\microchain.net.pdb
-C:\Users\alber\Projects\microchain.net\Library\obj\Debug\net6.0\microchain.net.csproj.AssemblyReference.cache
-C:\Users\alber\Projects\microchain.net\Library\obj\Debug\net6.0\microchain.net.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\alber\Projects\microchain.net\Library\obj\Debug\net6.0\microchain.net.AssemblyInfoInputs.cache
-C:\Users\alber\Projects\microchain.net\Library\obj\Debug\net6.0\microchain.net.AssemblyInfo.cs
-C:\Users\alber\Projects\microchain.net\Library\obj\Debug\net6.0\microchain.net.csproj.CoreCompileInputs.cache
-C:\Users\alber\Projects\microchain.net\Library\obj\Debug\net6.0\microchain.net.dll
-C:\Users\alber\Projects\microchain.net\Library\obj\Debug\net6.0\ref\microchain.net.dll
-C:\Users\alber\Projects\microchain.net\Library\obj\Debug\net6.0\microchain.net.pdb
